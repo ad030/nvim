@@ -48,4 +48,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.keymap.set('n', '<Leader>cf', '<cmd>cd %:h', { desc = 'Change directory to current file' })
+vim.keymap.set('n', '<leader>cf', '<cmd>cd %:h <CR>', { desc = 'Change directory to current file' })
