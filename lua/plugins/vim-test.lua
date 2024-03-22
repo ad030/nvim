@@ -3,7 +3,4 @@ return {
 	keys = {
 		{ "<leader>T", ":TestFile<CR>", "n" },
 	},
-	config = function()
-		require("vim-test").setup()
-	end,
 }
