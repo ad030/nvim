@@ -47,7 +47,7 @@ require("lazy").setup({
 
 	require("plugins/markdown-preview"),
 
-	require("plugins/vim-test"),
+	require("plugins/nvim-jdtls"),
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -91,4 +91,3 @@ require("lazy").setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
