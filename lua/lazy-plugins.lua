@@ -31,6 +31,10 @@ require("lazy").setup({
 
 	require("plugins/telescope"),
 
+	require("plugins/nvim-java"),
+
+	require("plugins/nvim-jdtls"),
+
 	require("plugins/nvim-lspconfig"),
 
 	require("plugins/conform"),
@@ -46,8 +50,6 @@ require("lazy").setup({
 	require("plugins/nvim-treesitter"),
 
 	require("plugins/markdown-preview"),
-
-	require("plugins/nvim-jdtls"),
 
 	require("plugins/coc"),
 
