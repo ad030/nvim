@@ -50,3 +50,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Change directory to current file
 vim.keymap.set("n", "<leader>cf", "<cmd>cd %:h <CR>", { desc = "Change directory to current file" })
+
+-- Run current Python file
+vim.keymap.set("n", "<leader>prf", ":term python %", { desc = "[P]ython [R]un [F]ile" })
