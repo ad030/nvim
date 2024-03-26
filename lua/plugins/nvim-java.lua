@@ -18,4 +18,14 @@ return {
 			},
 		},
 	},
+
+	config = function()
+		vim.keymap.set("n", "<leader>jrm", ":JavaRunnerRunMain", { desc = "[J]ava [R]un [M]ain" })
+
+		vim.keymap.set("n", "<leader>jsf", ":JavaRunnerStopMain", { desc = "[J]ava [S]top [M]ain" })
+
+		vim.keymap.set("n", "<leader>jtc", ":JavaTestRunCurrentClass", { desc = "[J]ava [T]est Run Current [C]lass " })
+
+		vim.keymap.set("n", "<leader>jtr", ":JavaTestViewLastReport", { desc = "[J]ava [T]est [R]eport" })
+	end,
 }

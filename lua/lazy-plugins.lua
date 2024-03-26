@@ -9,9 +9,9 @@
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require("lazy").setup({
+local plugins = {
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	require("plugins/vim-sleuth"), -- Detect tabstop and shiftwidth automatically
 
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -23,7 +23,8 @@ require("lazy").setup({
 	--    require('Comment').setup({})
 
 	-- "gc" to comment visual regions/lines
-	{ "numToStr/Comment.nvim", opts = {} },
+
+	require("plugins/comment"),
 
 	require("plugins/gitsigns"),
 
@@ -53,6 +54,8 @@ require("lazy").setup({
 
 	require("plugins/coc"),
 
+	require("plugins/autoclose"),
+
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and
 	-- put them in the right spots if you want.
@@ -71,7 +74,9 @@ require("lazy").setup({
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
-}, {
+}
+
+local opts = {
 	ui = {
 		-- If you have a Nerd Font, set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons otherwise define a unicode icons table
@@ -91,7 +96,9 @@ require("lazy").setup({
 			lazy = "💤 ",
 		},
 	},
-})
+}
+
+require("lazy").setup(plugins, opts)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

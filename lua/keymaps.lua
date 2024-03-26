@@ -50,6 +50,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Change directory to current file
 vim.keymap.set("n", "<leader>cf", "<cmd>cd %:h <CR>", { desc = "Change directory to current file" })
-
--- Insert closing curly braces automatically
-vim.keymap.set("i", "{<CR>", "{<CR><CR>}")
