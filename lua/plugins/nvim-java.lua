@@ -20,12 +20,12 @@ return {
 	},
 
 	config = function()
-		vim.keymap.set("n", "<leader>jrm", ":JavaRunnerRunMain", { desc = "[J]ava [R]un [M]ain" })
+		vim.keymap.set("n", "<leader>rmj", ":JavaRunnerRunMain", { desc = "[R]un [M]ain [J]ava" })
 
-		vim.keymap.set("n", "<leader>jsf", ":JavaRunnerStopMain", { desc = "[J]ava [S]top [M]ain" })
+		vim.keymap.set("n", "<leader>smj", ":JavaRunnerStopMain", { desc = "[S]top [M]ain [J]ava" })
 
-		vim.keymap.set("n", "<leader>jtc", ":JavaTestRunCurrentClass", { desc = "[J]ava [T]est Run Current [C]lass " })
+		vim.keymap.set("n", "<leader>tcj", ":JavaTestRunCurrentClass", { desc = "[T]est Run Current [C]lass [J]ava" })
 
-		vim.keymap.set("n", "<leader>jtr", ":JavaTestViewLastReport", { desc = "[J]ava [T]est [R]eport" })
+		vim.keymap.set("n", "<leader>trj", ":JavaTestViewLastReport", { desc = "[T]est [R]eport [J]ava" })
 	end,
 }
