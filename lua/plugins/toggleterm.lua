@@ -1,5 +1,5 @@
 return {
-	"akinshi/toggleterm.nvim",
+	"akinsho/toggleterm.nvim",
 
 	event = "VeryLazy",
 
