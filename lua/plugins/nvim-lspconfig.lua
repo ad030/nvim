@@ -162,6 +162,9 @@ return {
 				-- python language server
 				pyright = {},
 
+				-- c sharp language server
+				csharp_ls = {},
+
 				-- lua language server
 				lua_ls = {
 					-- cmd = {...},
