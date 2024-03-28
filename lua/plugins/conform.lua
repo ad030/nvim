@@ -1,54 +1,49 @@
 return {
-	{ -- Autoformat
-		"stevearc/conform.nvim",
-		config = function()
-			local conform = require("conform")
+	-- Autoformat
+	"stevearc/conform.nvim",
+	config = {
 
-			conform.setup({
+		notify_on_error = false,
+		format_on_save = {
+			timeout_ms = 500,
+			lsp_fallback = true,
+			async = false,
+		},
+		formatters_by_ft = {
+			lua = { "stylua" },
 
-				notify_on_error = false,
-				format_on_save = {
-					timeout_ms = 500,
-					lsp_fallback = true,
-					async = false,
-				},
-				formatters_by_ft = {
-					lua = { "stylua" },
+			java = { "google-java-format" },
 
-					java = { "google-java-format" },
+			-- Conform can also run multiple formatters sequentially
+			python = { "isort", "black" },
+			--
+			-- You can use a sub-list to tell conform to run *until* a formatter
+			-- is found.
+			javascript = { "prettier" },
 
-					-- Conform can also run multiple formatters sequentially
-					python = { "isort", "black" },
-					--
-					-- You can use a sub-list to tell conform to run *until* a formatter
-					-- is found.
-					javascript = { "prettier" },
+			typescript = { "prettier" },
 
-					typescript = { "prettier" },
+			javascriptreact = { "prettier" },
 
-					javascriptreact = { "prettier" },
+			typescriptreact = { "prettier" },
 
-					typescriptreact = { "prettier" },
+			css = { "prettier" },
 
-					css = { "prettier" },
+			html = { "prettier" },
 
-					html = { "prettier" },
+			json = { "prettier" },
 
-					json = { "prettier" },
+			yaml = { "prettier" },
 
-					yaml = { "prettier" },
+			markdown = { "prettier" },
 
-					markdown = { "prettier" },
+			graphql = { "prettier" },
 
-					graphql = { "prettier" },
+			svelte = { "prettier" },
 
-					svelte = { "prettier" },
+			xml = { "xmllint" },
 
-					xml = { "xmllint" },
-
-					csharp = { "astyle" },
-				},
-			})
-		end,
+			csharp = { "astyle" },
+		},
 	},
 }
