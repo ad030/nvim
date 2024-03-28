@@ -1,7 +1,7 @@
 return {
 	"m4xshen/autoclose.nvim",
 
-	config = {
+	opts = {
 		keys = {
 			["("] = { escape = false, close = true, pair = "()" },
 			["["] = { escape = false, close = true, pair = "[]" },
