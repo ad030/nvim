@@ -14,7 +14,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 
-			java = { "google-java-format" },
+			java = { "google-java-format", "asort" },
 
 			-- Conform can also run multiple formatters sequentially
 			python = { "isort", "black" },
