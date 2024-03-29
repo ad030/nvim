@@ -16,6 +16,7 @@ return {
 			-- used for completion, annotations and signatures of Neovim apis
 			{ "folke/neodev.nvim", opts = {} },
 		},
+
 		config = function()
 			-- Brief Aside: **What is LSP?**
 			--
@@ -195,6 +196,8 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format lua code
+				"prettier",
+				"prettierd",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
