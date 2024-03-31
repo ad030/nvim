@@ -26,17 +26,17 @@ local plugins = {
 
 	require("plugins/comment"),
 
+	require("plugins/nvim-treesitter"),
+
 	require("plugins/gitsigns"),
 
 	require("plugins/which-key"),
 
 	require("plugins/telescope"),
 
-	require("plugins/nvim-java"),
+	require("plugins/nvim-lspconfig"),
 
 	require("plugins/nvim-jdtls"),
-
-	require("plugins/nvim-lspconfig"),
 
 	require("plugins/conform"),
 
@@ -48,11 +48,7 @@ local plugins = {
 
 	require("plugins/mini"),
 
-	require("plugins/nvim-treesitter"),
-
 	require("plugins/markdown-preview"),
-
-	require("plugins/coc"),
 
 	require("plugins/autoclose"),
 
