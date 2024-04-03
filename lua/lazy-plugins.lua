@@ -34,6 +34,8 @@ local plugins = {
 
 	require("plugins/telescope"),
 
+	require("plugins/nvim-java"),
+
 	require("plugins/nvim-lspconfig"),
 
 	require("plugins/nvim-jdtls"),
