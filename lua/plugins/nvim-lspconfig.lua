@@ -163,6 +163,9 @@ return {
 				-- python language server
 				pyright = {},
 
+				-- c and c++ language server
+				clangd = {},
+
 				-- c sharp language server
 				csharp_ls = {},
 
