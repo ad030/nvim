@@ -201,11 +201,11 @@ return {
 				"stylua", -- Used to format lua code
 				"prettier",
 				"prettierd",
+				"clangd",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("java").setup()
-			require("lspconfig").jdtls.setup({})
 
 			require("mason-lspconfig").setup({
 				handlers = {
