@@ -25,9 +25,9 @@ return {
 
 			vim.keymap.set("n", "<leader>jsm", ":JavaRunnerStopMain<CR>", { desc = "[J]ava [S]top [M]ain" })
 
-			vim.keymap.set("n", "<leader>jtr", ":JavaTestRunCurrentClass<CR>", { desc = "[J]ava [T]est [R]un" })
+			vim.keymap.set("n", "<leader>jrt", ":JavaTestRunCurrentClass<CR>", { desc = "[J]ava [T]est [R]un" })
 
-			vim.keymap.set("n", "<leader>jtr", ":JavaTestViewLastReport<CR>", { desc = "[J]ava [T]est [R]eport" })
+			vim.keymap.set("n", "<leader>jvtr", ":JavaTestViewLastReport<CR>", { desc = "[J]ava [T]est [R]eport" })
 		end,
 	},
 }
