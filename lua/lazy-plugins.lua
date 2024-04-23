@@ -26,7 +26,7 @@ local plugins = {
 
 	require("plugins/comment"),
 
-	require("plugins/nvim-treesitter"),
+	require("plugins/treesitter"),
 
 	require("plugins/gitsigns"),
 
@@ -34,15 +34,15 @@ local plugins = {
 
 	require("plugins/telescope"),
 
-	require("plugins/nvim-lspconfig"),
+	require("plugins/lspconfig"),
 
 	require("plugins/nvim-java"),
 
-	require("plugins/nvim-jdtls"),
+	require("plugins/jdtls"),
 
 	require("plugins/conform"),
 
-	require("plugins/nvim-cmp"),
+	require("plugins/cmp"),
 
 	require("plugins/tokyonight"),
 
