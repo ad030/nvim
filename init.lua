@@ -1,7 +1,5 @@
-require ("options")
+require("options")
 
-require ("keymaps")
+require("keymaps")
 
-require ("lazy-bootstrap")
-
-require ("lazy-plugins")
+require("lazy-nvim")

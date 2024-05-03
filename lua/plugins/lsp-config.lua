@@ -156,15 +156,14 @@ return {
 
 				-- typescript language server
 				tsserver = {},
-
-				-- eclipse java language server
-				jdtls = {},
-
 				-- python language server
 				pyright = {},
 
 				-- c and c++ language server
 				clangd = {},
+
+				-- java language server
+				jdtls = {},
 
 				-- c sharp language server
 				csharp_ls = {},
@@ -201,11 +200,10 @@ return {
 				"stylua", -- Used to format lua code
 				"prettier",
 				"prettierd",
-				"clangd",
+				"java-debug-adapter",
+				"java-test",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
-
-			require("java").setup()
 
 			require("mason-lspconfig").setup({
 				handlers = {
@@ -214,8 +212,14 @@ return {
 						-- This handles overriding only values explicitly passed
 						-- by the server configuration above. Useful when disabling
 						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
+
+						-- do not call setup for jdtls
+
+						if server_name ~= "jdtls" then
+							server.capabilities =
+								vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+							require("lspconfig")[server_name].setup(server)
+						end
 					end,
 				},
 			})

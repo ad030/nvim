@@ -9,6 +9,12 @@ return {
 				lsp_fallback = true,
 			},
 
+			formatters = {
+				astyle = {
+					command = "astyle/as-gcc-exe/astyle",
+				},
+			},
+
 			formatters_by_ft = {
 				lua = { "stylua" },
 
@@ -42,6 +48,8 @@ return {
 				xml = { "xmllint" },
 
 				csharp = { "astyle" },
+
+				c = { "clang-format", "astyle" },
 			},
 		},
 	},

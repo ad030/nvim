@@ -1,13 +1,3 @@
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins, you can run
---    :Lazy update
---
 -- NOTE: Here is where you install your plugins.
 local plugins = {
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
@@ -24,37 +14,39 @@ local plugins = {
 
 	-- "gc" to comment visual regions/lines
 
-	require("plugins/comment"),
+	require("plugins.comment"),
 
-	require("plugins/treesitter"),
+	require("plugins.treesitter"),
 
-	require("plugins/gitsigns"),
+	require("plugins.gitsigns"),
 
-	require("plugins/which-key"),
+	require("plugins.which-key"),
 
-	require("plugins/telescope"),
+	require("plugins.telescope"),
 
-	require("plugins/lspconfig"),
+	require("plugins.nvim-java"),
 
-	require("plugins/nvim-java"),
+	require("plugins.lsp-config"),
 
-	require("plugins/jdtls"),
+	require("plugins.nvim-jdtls"),
 
-	require("plugins/conform"),
+	require("plugins.dap"),
 
-	require("plugins/cmp"),
+	require("plugins.conform"),
 
-	require("plugins/tokyonight"),
+	require("plugins.cmp"),
 
-	require("plugins/todo-comments"),
+	require("plugins.tokyonight"),
 
-	require("plugins/mini"),
+	require("plugins.todo-comments"),
 
-	require("plugins/markdown-preview"),
+	require("plugins.mini"),
 
-	require("plugins/autoclose"),
+	require("plugins.markdown-preview"),
 
-	require("plugins/toggleterm"),
+	require("plugins.autoclose"),
+
+	require("plugins.toggleterm"),
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 	-- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -75,6 +67,26 @@ local plugins = {
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
 }
+
+-- [[ Install `lazy.nvim` plugin manager ]]
+--    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+	vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+end ---@diagnostic disable-next-line: undefined-field
+vim.opt.rtp:prepend(lazypath)
+
+-- [[ Configure and install plugins ]]
+--
+--  To check the current status of your plugins, run
+--    :Lazy
+--
+--  You can press `?` in this menu for help. Use `:q` to close the window
+--
+--  To update plugins, you can run
+--    :Lazy update
+--
 
 local opts = {
 	ui = {
@@ -99,6 +111,3 @@ local opts = {
 }
 
 require("lazy").setup(plugins, opts)
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et

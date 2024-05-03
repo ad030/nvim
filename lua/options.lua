@@ -76,3 +76,6 @@ vim.opt.ttyfast = true
 
 -- bash-like tab completion
 vim.opt.wildmode = "longest:list"
+
+-- smart indent
+vim.opt.smartindent = true
