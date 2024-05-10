@@ -12,6 +12,9 @@ return {
 			formatters = {
 				astyle = {
 					command = "astyle/as-gcc-exe/astyle",
+					env = {
+						style = "allman",
+					},
 				},
 			},
 
@@ -49,7 +52,7 @@ return {
 
 				csharp = { "astyle" },
 
-				c = { "clang-format", "astyle" },
+				c = { "clang-format" },
 			},
 		},
 	},
