@@ -26,7 +26,7 @@ local plugins = {
 
 	require("plugins.nvim-java"),
 
-	require("plugins.lsp-config"),
+	require("plugins.nvim-lspconfig"),
 
 	require("plugins.nvim-jdtls"),
 
