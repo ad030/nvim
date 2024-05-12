@@ -12,6 +12,6 @@ My personal Neovim config for use as an IDE.
 
 ### Formatters
 
-Formatters that can't be downloaded using Mason are found here:
+Formatters that can't be downloaded using Mason:
 
 - astyle
