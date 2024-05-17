@@ -10,10 +10,9 @@ return {
 			},
 
 			formatters = {
-				astyle = {
-					command = "astyle/as-gcc-exe/astyle",
-					env = {
-						style = "allman",
+				clang_format = {
+					args = {
+						"--style=llvm",
 					},
 				},
 			},
@@ -21,10 +20,10 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 
-				java = { "google-java-format", "astyle" },
+				java = { "google-java-format" },
 
 				-- Conform can also run multiple formatters sequentially
-				python = { "isort", "black", "autopep8" },
+				python = {},
 				--
 				-- You can use a sub-list to tell conform to run *until* a formatter
 				-- is found.
