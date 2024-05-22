@@ -6,6 +6,11 @@ vim.g.maplocalleader = ","
 
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
+local fontToUse = "JetBrains Mono NL Regular"
+
+if vim.g.have_nerd_font then
+	vim.opt.guifont = fontToUse
+end
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`

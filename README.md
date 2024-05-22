@@ -1,6 +1,9 @@
 # ad030's Neovim Config
 
 My personal Neovim config for use as an IDE.
+Based off of the kickstart.nvim config.
+
+This readme file contains the stuff I need to download for this config to work.
 
 ## Requirements
 
@@ -12,6 +15,6 @@ My personal Neovim config for use as an IDE.
 
 ### Formatters
 
-Formatters that can't be downloaded using Mason:
+### Font
 
-- astyle
+- JetBrains Mono
