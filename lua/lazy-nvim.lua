@@ -1,52 +1,58 @@
 -- NOTE: Here is where you install your plugins.
 local plugins = {
+	-- colorscheme
 	require("colors.kanagawa"),
 
+	-- adjusts shift and tab length based on file
 	require("plugins/vim-sleuth"),
 
+	-- toggle commenting a line
 	require("plugins.comment"),
 
+	-- highlight syntax
 	require("plugins.treesitter"),
 
+	-- git decorations within a file
 	require("plugins.gitsigns"),
 
+	-- displays possible commands based on what keys have been pressed
 	require("plugins.which-key"),
 
+	-- plugin to search files
 	require("plugins.telescope"),
 
-	require("plugins.nvim-java"),
-
+	-- set up lsps
 	require("plugins.nvim-lspconfig"),
 
+	-- config jdtls lsp
 	require("plugins.nvim-jdtls"),
 
+	-- code debugger protocol
 	require("plugins.dap"),
 
+	-- code formatter
 	require("plugins.conform"),
 
-	require("plugins.cmp"),
+	-- autocompletion for code
+	require("plugins.nvim-cmp"),
 
+	-- highlight todo comments
 	require("plugins.todo-comments"),
 
+	-- various plugins
 	require("plugins.mini"),
 
+	-- preview markdown files
 	require("plugins.markdown-preview"),
 
+	-- automatically close brackets
 	require("plugins.autoclose"),
 
+	-- terminal in neovim plugin
 	require("plugins.toggleterm"),
 
-	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
-	-- init.lua. If you want these files, they are in the repository, so you can just download them and
-	-- put them in the right spots if you want.
-
-	-- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for kickstart
-	--
-	--  Here are some example plugins that I've included in the kickstart repository.
-	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
-	--
-	-- require 'kickstart.plugins.debug',
-	-- require 'kickstart.plugins.indent_line',
+	-- latex filetype plugin
+	require("plugins.vimtex"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.
