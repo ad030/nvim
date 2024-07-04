@@ -27,6 +27,9 @@ local plugins = {
 	-- config jdtls lsp
 	require("plugins.nvim-jdtls"),
 
+	-- obsidian plugin for markdown files
+	require("plugins.obsidian-nvim"),
+
 	-- code debugger protocol
 	require("plugins.dap"),
 

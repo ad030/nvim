@@ -165,9 +165,6 @@ return {
 				-- java language server
 				jdtls = {},
 
-				-- c sharp language server
-				csharp_ls = {},
-
 				-- lua language server
 				lua_ls = {
 					-- cmd = {...},
